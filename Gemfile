@@ -83,8 +83,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-<<<<<<< HEAD
 
 gem "devise", "~> 4.9"
-=======
->>>>>>> f4957c97b2002aac6f36699959a3484dc2aeb28f

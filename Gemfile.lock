@@ -95,15 +95,12 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
-<<<<<<< HEAD
     devise (4.9.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-=======
->>>>>>> f4957c97b2002aac6f36699959a3484dc2aeb28f
     erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
@@ -150,10 +147,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-x64-mingw-ucrt)
       racc (~> 1.4)
-<<<<<<< HEAD
     orm_adapter (0.5.0)
-=======
->>>>>>> f4957c97b2002aac6f36699959a3484dc2aeb28f
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -192,12 +186,9 @@ GEM
     regexp_parser (2.8.0)
     reline (0.3.5)
       io-console (~> 0.5)
-<<<<<<< HEAD
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
-=======
->>>>>>> f4957c97b2002aac6f36699959a3484dc2aeb28f
     rexml (3.2.5)
     rubyzip (2.3.2)
     sassc (2.4.0)
@@ -233,11 +224,8 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2023.3)
       tzinfo (>= 1.0.0)
-<<<<<<< HEAD
     warden (1.2.9)
       rack (>= 2.0.9)
-=======
->>>>>>> f4957c97b2002aac6f36699959a3484dc2aeb28f
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -266,10 +254,7 @@ DEPENDENCIES
   bootstrap-will_paginate (~> 1.0)
   capybara
   debug
-<<<<<<< HEAD
   devise (~> 4.9)
-=======
->>>>>>> f4957c97b2002aac6f36699959a3484dc2aeb28f
   importmap-rails
   jbuilder
   jquery-rails

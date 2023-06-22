@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # devise gem authentication routes for users
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,16 +14,19 @@ Rails.application.routes.draw do
 
   get "about", to: "pages#about"
 
-  # Gave all the articles path (show, update, edit, destroy)
+  # Gives all the articles routes
   resources :articles
 
   # users signup routes
   get "signup", to: "users#new"
-
   # users login and logout routes
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
   get "logout", to: "sessions#destroy"
 
+  # users routes
   resources :users, except: [:new]
+
+  # categories routes
+  resources :categories, expect: [:destroy]
 end
