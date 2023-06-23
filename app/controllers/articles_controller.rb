@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
   end
+
   def create
     # It will render the data in an object like form
     # render plain: params[:article].inspect
@@ -74,7 +75,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, category_ids: [])
   end
 
   def set_article

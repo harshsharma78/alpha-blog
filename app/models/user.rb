@@ -6,6 +6,7 @@ class User < ApplicationRecord
   alias_attribute :password_digest, :encrypted_password
   # before_create :skip_confirmation_notification!
 
+  # one-to-many associations
   has_many :articles, dependent: :destroy
 
   before_save { self.email = email.downcase }
