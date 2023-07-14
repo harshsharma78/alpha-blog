@@ -1,3 +1,8 @@
-<h1 align="center">Edit existing article</h1>
-
-<%= render 'form' %> 
+<%# <h1 align ="center"> Edit existing article </h1> %>
+<div class="background">
+<div class="blur"></div>
+</div>
+<div class="modal show fade in" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <%= render 'edit_modal', local: {article: @article} %>
+</div>
+<%#= render 'form' %>

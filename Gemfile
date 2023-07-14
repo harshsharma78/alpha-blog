@@ -6,9 +6,9 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 
-gem 'bcrypt', '~> 3.1', '>= 3.1.12'
-gem 'will_paginate', '~> 3.1', '>= 3.1.6'
-gem 'bootstrap-will_paginate', '~> 1.0'
+gem "bcrypt", "~> 3.1", ">= 3.1.12"
+gem "will_paginate", "~> 3.1", ">= 3.1.6"
+gem "bootstrap-will_paginate", "~> 1.0"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -46,10 +46,12 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem "jquery-rails"
+# gem "bootstrap"
+gem "popper"
 # Use Sass to process CSS
-gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+gem "bootstrap-sass", "~> 3.4.1"
+gem "sassc-rails", ">= 2.1.0"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -85,4 +87,4 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
-gem 'rails-controller-testing'
+gem "rails-controller-testing"

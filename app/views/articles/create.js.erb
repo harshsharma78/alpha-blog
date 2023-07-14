@@ -1,0 +1,5 @@
+$('#articles').prepend("<%= j render @article %>");
+$('#exampleModal').modal('hide');
+$('#exampleModal').on('hidden.bs.modal', function (event) {
+$(this).find('input[type="text"], textarea').val('');
+});

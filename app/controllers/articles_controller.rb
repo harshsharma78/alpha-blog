@@ -30,6 +30,7 @@ class ArticlesController < ApplicationController
         format.html {
           redirect_to article_path(@article)
         }
+        format.js
       else
         # NOTE: this will render `new.erb` and set
         #       `Content-Type: text/html` header;
@@ -37,6 +38,7 @@ class ArticlesController < ApplicationController
         format.html {
           render(:new, status: :unprocessable_entity)
         }
+        render "new"
       end
     end
   end
@@ -53,10 +55,12 @@ class ArticlesController < ApplicationController
         format.html {
           redirect_to article_path(@article)
         }
+        format.js
       else
         format.html {
           render(:edit, status: :unprocessable_entity)
         }
+        render "new"
       end
     end
   end

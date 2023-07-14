@@ -1,0 +1,14 @@
+document.getElementById("update").addEventListener("click", function() {
+// Create a new XMLHttpRequest object
+var xhttp = new XMLHttpRequest();
+// Define the callback function
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+// Update the content with the response from the server
+document.getElementById("content").innerHTML = this.responseText;
+}
+};
+// Open the request and send it to the server
+xhttp.open("GET", "update.js", true);
+xhttp.send();
+});

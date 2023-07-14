@@ -1,0 +1,50 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content", style="height: 49rem;margin-top: 5.2rem;">
+    <div class="modal-header">
+      <h3 align="center", class="modal-title" id="edit-modal-<%= @article %>"><b>Edit an Article</b></h3>
+      <%# <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> %>
+    </div>
+    <div class="modal-body",>
+      <%= form_with(model: @article, local: false, turbo: false) do |f| %>
+        <div class="form-group">
+          <div class="control-label col-sm-2">
+            <%= f.label :title %>
+          </div>
+          <div class="col-sm-10" >
+            <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true, style:"margin-bottom: 15px;" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="control-label col-sm-2"
+>
+            <%= f.label :description %>
+          </div>
+          <div class="col-sm-10">
+            <%= f.text_area :description, rows: 10, class: "form-control",style:"margin-bottom: 15px;resize:none;height:20rem",placeholder: "Body of article" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-offset-2 col-md-9">
+              <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class:"checkbox") + cb.text} %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div align="center", class="col-sm-offset-1 col-sm-2">
+            <%= f.submit "Update Article", class: "btn btn-warning btn-lg", id:"update" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-4">
+            <%= link_to "Cancel Request", articles_path, class: "btn btn-warning btn-lg", id:"update" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
