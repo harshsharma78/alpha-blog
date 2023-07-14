@@ -72,13 +72,6 @@ group :development do
   # gem "spring"
 end
 
-# For formatting and intellisense
-# group :development, :test do
-#   gem "ruby-debug-ide", require: false
-#   gem "debase", require: false
-#   gem 'solargraph', require: false
-# end
-
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"

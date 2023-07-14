@@ -18,8 +18,13 @@ class User < ApplicationRecord
   has_secure_password
 
   before_create :set_username
+  after_create :send_welcome_email
 
   private
+
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver_later
+  end
 
   def set_username
     self.username = self.email[/^[^@]+/]
